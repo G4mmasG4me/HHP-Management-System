@@ -1,0 +1,23 @@
+.employee {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  border-radius: 100vh;
+}
+
+.employee-img {
+  border: 2px solid black;
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+}
+
+.employee-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.remove-empoyee {
+  border: 2px solid black;
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+}

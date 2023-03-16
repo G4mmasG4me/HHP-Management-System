@@ -1,0 +1,576 @@
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* Calendar Styling */
+.calendar-control-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+.calendar-control-bar > * {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: left;
+  align-items: center;
+}
+
+.week-selector-submit {
+  border: none;
+  font-size: 24px;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 50%;
+}
+
+.week-selector-submit:hover {
+  border: 1px solid black;
+  background-color: rgba(257,200,0,0.5);
+}
+
+
+/* Calendar Work Styling */
+.works {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: absolute;
+  width: 14.2857%;
+  background-color: rgba(247,200,0,0.75);
+  border-radius: 8px;
+  border: 1px solid var(--main-yellow);
+  font-size: 12px;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+.work > * {
+  padding: 4px;
+}
+
+.work h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.work h2 {
+
+}
+
+.work p1 {
+  font-size: 16px;
+}
+
+/* Add Work Button */
+.add-work-button {
+  padding: 8px;
+  background-color: black;
+  border: 2px solid #f7c800;
+  color: #f7c800;
+  border-radius: 8px;
+}
+
+/* Popout Styling */
+.cover-container {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.add-work .popout form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-work-form input[type="datetime-local"], .add-work-form input[type="text"], .add-work-form input[type="submit"] {
+  box-sizing: border-box;
+  padding: 2px;
+  border-radius: 1px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.popouts {
+  display: none;
+  flex-direction: column;
+  width: 40vw;
+  height: 40vw;
+  max-height: 100vh;
+  background-color: var(--main-yellow);
+  border: 4px solid black;
+  box-shadow: 0 0 32px black;
+  border-radius: 16px;
+}
+
+.navbar {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Popout Navbar */
+
+.work-popout-navbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: black;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  
+  align-items: center;
+}
+
+.work-popout-navbar * {
+  color: var(--main-yellow);
+}
+
+.work-popout-navbar > .left, .center, .right {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.work-popout-navbar > .left {
+  justify-content: flex-start;
+}
+.work-popout-navbar > .center {
+  justify-content: center
+}
+.work-popout-navbar > .right {
+  justify-content: flex-end;
+}
+
+.work-popout-navbar > button + button {
+  border-left: 2px solid var(--main-yellow);
+}
+
+.change-event > work-popout-navbar :first-child {
+  border-top-left-radius: 14px;
+}
+
+.work-popout-navbar > .item {
+  width: 100%;
+  padding: 16px;
+  background-color: black;
+  color: var(--main-yellow);
+}
+
+.cover-container-close {
+  background-color: black;
+  color: var(--main-yellow);
+  padding: 16px;
+  border-top-right-radius: 14px;
+}
+
+.work-popout-content {
+  height: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.work-popout-content > * {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.work-popout > .work-popout-content > * {
+  width: 100%;
+}
+
+
+/* Note Styling */
+
+.notes-container {
+}
+
+.notes {
+  width: 100%;
+}
+.notes > div {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  margin: 4px;
+  border: 2px solid black;
+  border-radius: 16px;
+  background-color: black;
+}
+
+.notes > div > input, textarea {
+  padding: 4px;
+  margin: 4px;
+  border-radius: 8px;
+  background-color: black;
+  color: var(--main-yellow);
+  max-width: 100%;
+}
+
+.notes > div > input:focus, textarea:focus {
+  border: 2px solid var(--main-yellow);
+}
+
+
+/* Receipt Styling */
+
+.products {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid black;
+  margin: 4px;
+  flex-grow: 1;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  border: 4px solid black;
+  border-radius: 8px;
+  justify-content: center;
+  margin: 4px;
+}
+
+.product > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product > .product-img {
+  background-color: black;
+  height: 64px;
+  width: 64px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.product > .info {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 16px;
+}
+
+.product > .add, .product > .minus {
+  background-color: black;
+  color: var(--main-yellow);
+  aspect-ratio: 1/1;
+  font-size: 32px;
+}
+
+.amount, .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+  font-size: 24px;
+}
+
+.search-bar {
+  margin: 4px;
+  padding: 4px;
+  border: 4px solid black;
+  background-color: var(--main-yellow);
+  border-radius: 50vh;
+  flex-grow: 1;
+}
+.search-results .price {
+  border: 0px solid black;
+  border-width: 0px 4px;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Pricing Stuff and Adjustment Styling */
+
+.pricing {
+  display: flex;
+  flex-direction: row;
+  border: 4px solid black;
+  margin: 4px;
+  flex-grow: 1;
+}
+
+.pricing label {
+  font-size: 16px;
+}
+.pricing > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.pricing > div > div {
+  height: 100%;
+}
+
+.pricing input, .pricing button {
+  border: 4px solid black;
+  background-color: var(--main-yellow);
+}
+
+.pricing input {
+  width: 50%;
+  padding: 8px;
+}
+
+.pricing > * > div {
+  margin: 4px;
+}
+
+.pricing > .left > div:first-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+.adjustment-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.adjustment-container input {
+  text-align: center;
+}
+.adjustment-container > button {
+  padding: 8px;
+}
+
+.adjustment-container > button:first-of-type {
+  border-top-left-radius: 50vh;
+  border-bottom-left-radius: 50vh;
+  border-right: none;
+}
+.adjustment-container > button:last-of-type {
+  border-top-right-radius: 50vh;
+  border-bottom-right-radius: 50vh;
+  border-left: none;
+}
+
+
+/* right side of pricing specific styling */
+.pricing > .right > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.pricing > .right input {
+  border-radius: 50vh;
+  text-align: right;
+}
+
+
+
+/* Form Input Styling */
+legend {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #f7c800;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 4px;
+}
+
+.form-input label {
+  width: 100%;
+  color: black;
+}
+
+.form-input input, .form-input textarea {
+  width: 100%;
+  border: 2px outset #f7c800;
+  padding: 1px;
+  background-color: black;
+  color: #f7c800;
+}
+
+
+/* Form Styling */
+form > fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.day-word {
+  color: black;
+}
+
+.day-number {
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.today > .day-number {
+  background-color: black;
+  color: var(--main-yellow);
+}
+
+
+/* Calendar Styling */
+.calendar {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+}
+.dates {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.dates > div {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.dates > div > div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-left: 2px solid grey;
+  justify-content: center;
+}
+
+.calendar > .calendar-subsection {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.dates h1 {
+  font-size: 24px;
+}
+
+.date > .today > * {
+  background-color: #f7c800;
+  border-radius: 50px;
+  padding: 4px;
+  aspect-ratio: 1/1;
+}
+.times {
+  display: flex;
+  flex-direction: column;
+}
+
+.times > div {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(-50%);
+  padding: 4px;
+}
+
+.calendar-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.calendar-content > .row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid grey;
+}
+
+.calendar-content > .row:first-child div  {
+  border-top: 1px solid grey
+}
+
+.row > div {
+  width: 100%;
+  border-left: 2px solid grey;
+}
+
+.calendar-tl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.events {
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+}
+
+.current-time {
+  position: relative;
+  width: calc(100% / 7);
+}
+
+.current-time > .circle{
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--main-yellow);
+  border: 2px solid black;
+  position: absolute;
+  top: -4px; /* (1/2*circle height - 1/2*Line Height), centers it with the line*/
+  left: 0; /* Can change to half - half width centers circle with */
+}
+
+.current-time > .line {
+  width: 100%;
+  height: 8px;
+  border: 1px solid black;
+  border-top: 2px solid black;
+  border-radius: 50vh;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background-color: var(--main-yellow);
+
+}

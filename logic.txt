@@ -1,0 +1,33 @@
+event colour
+each work type has a default colour
+upon selecting the work type for 
+
+
+add work form
+contains the default colour for work without type,
+upon selection of wrok type, the colour changes to work type colour
+they can then select their own custom coloru if they watn
+
+for search customer and search work type,
+at start only displays search forms
+when you search it displays all found options
+if you click on option, then it selects taht for the input
+and hides the search form
+and shows the selected input, but shows it as a div instead of input
+the input value is hidden
+
+
+
+
+
+
+
+repeating events
+
+includes start date
+includes end date
+includes repeat type
+
+types of repeat type
+every x amount of days from start
+every weekday

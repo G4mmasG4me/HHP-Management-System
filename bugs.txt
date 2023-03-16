@@ -1,0 +1,5 @@
+19/02/2023
+-add event popout, customer search function not working
+-add event popout, close button misplaced
+
+-calendar event end positioning not aligning, so event height not big enough to match end time

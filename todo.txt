@@ -1,0 +1,46 @@
+convert form submits to function instead of ifs
+
+convert php functions to extneral function files, so refreshing doesn't submit the same post
+
+reduce sql executions
+
+
+
+---databases---
+permissions database
+
+
+---features to add---
+
+
+employee profiles
+
+--calendar--
+either limit work to 1 day activities, and then duplicate them across selected days
+or let them go across multiple days, and program new script at start which will allow the work popout to do multiple days
+
+permissinos features
+add todo list section
+events specific to different employees
+
+-event note-
+notes specific to different employees, private or public notes
+add delete button to note
+add dropdown button to note
+add back button
+
+-event receipt-
+
+operations tab 
+allows to complete job 
+send receipt 
+as well as control job, e.g. edit, delete etc...
+
+
+---others---
+clean up css
+add comments
+turn all event variables into work variables
+
+change control panel sql statements, so that it just uses null data instead of changing the sql to include or not include inputs
+store functions in seperate files

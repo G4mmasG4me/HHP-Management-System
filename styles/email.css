@@ -1,0 +1,97 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+.email-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.email {
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+  height: 100%;
+  border: 4px solid red;
+}
+
+.email-content {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  width: 100%;
+  background-color: black;
+  color: #f7c800;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  background-color: whitesmoke;
+}
+
+.content > div {
+  width: 100%;
+}
+
+.content > .left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.content-section > div {
+  margin: 4px;
+}
+.book-service-button {
+  padding: 16px;
+  background-color: black;
+  border: 4px outset #f7c800;
+  border-radius: 16px;
+  color: #f7c800;
+  font-size: 24px;
+  margin: 4px;
+}
+
+.book-service-button:active {
+  border: 4px inset #f7c800;
+  background-color: #111111;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+.foot {
+  background-color: black;
+  color: #f7c800;
+  width: 100%;
+}

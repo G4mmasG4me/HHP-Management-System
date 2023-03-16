@@ -1,0 +1,26 @@
+:root {
+  --main-yellow: rgb(247, 202, 0);
+}
+
+* {
+  border: none;
+  outline: none;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

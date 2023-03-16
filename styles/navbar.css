@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  background-color: black;
+  border-bottom: 2px solid var(--main-yellow);
+}
+
+.navbar > div {
+  display: flex;
+  width: 100%;
+}
+
+.navbar > .start {
+  justify-content: flex-start;
+}
+
+.navbar > .center {
+  justify-content: center;
+}
+
+.navbar > .end {
+  justify-content: flex-end;
+}
+
+.navbar > div > a {
+  padding: 8px;
+  margin: 4px;
+  background-color: black;
+  color: var(--main-yellow);
+  border: 2px solid var(--main-yellow);
+  border-radius: 8px;
+}
